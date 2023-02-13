@@ -1,7 +1,9 @@
 import axios from 'axios';
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import { Gallery } from "./ImageGallery.styled"
+import { Gallery, GalleryItem } from "./ImageGallery.styled"
+
 import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem'
 import { Loader } from '../Loader/Loader'
 import { Modal } from '../Modal/Modal'
@@ -32,6 +34,7 @@ this.setState({openModal: false})
   async componentDidUpdate(prevProps, prevState) {
     const prevSearcPhoto = prevProps.searcPhoto.search;
     const currentSearcPhoto = this.props.searcPhoto.search;
+   
     if (prevSearcPhoto !== currentSearcPhoto || prevState.page !== this.state.page) {
       this.setState({isLoading: true});
      try {
@@ -66,10 +69,14 @@ this.setState({openModal: false})
     </Gallery>
         {isLoading && <Loader/>}
         {openModal && <Modal hendlCloseModal={this.hendlCloseModal}>
-        <img src={largeImageURL} alt="" width="600" height="400"/>
+        <GalleryItem src={largeImageURL} alt="" />
         </Modal>}
         
         {photos.length !== 0 && <Button  loadMore={this.loadMore}/>}
     </>);
   }
 }
+
+ImageGallery.propTypes = {
+ searcPhoto: PropTypes.objectOf(PropTypes.string),
+};

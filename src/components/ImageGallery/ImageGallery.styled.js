@@ -12,3 +12,9 @@ display: grid;
   margin-left: auto;
   margin-right: auto;
  `
+
+ export const GalleryItem = styled.img`
+width: 600px;
+ height: 400px;
+ `
+ 

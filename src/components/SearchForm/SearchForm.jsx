@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import React, { Component } from "react";
 import { Formik } from 'formik';
 import { Forma, Input, SearchButton, Label } from './SearchForm.styled';
@@ -5,7 +7,6 @@ import { Forma, Input, SearchButton, Label } from './SearchForm.styled';
 export class SearchForm extends Component {
 
 handleSubmit = (values, actions) => {
-    
     this.props.handlSearcPphoto(values)
         actions.resetForm();
     };
@@ -34,3 +35,7 @@ onSubmit={this.handleSubmit}
       
   }
 }
+
+SearchForm.propTypes = {
+   handlSearcPphoto: PropTypes.func,
+};
