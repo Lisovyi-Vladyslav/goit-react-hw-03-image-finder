@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import ReactDOM from "react-dom";
+
 import {Searchbar} from '../Searchbar/Searchbar'
 import { ImageGallery } from '../ImageGallery/ImageGallery'
 

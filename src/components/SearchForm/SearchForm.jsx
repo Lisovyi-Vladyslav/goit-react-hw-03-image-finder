@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Forma, Input, SearchButton, Label } from './SearchForm.styled'
+
+import { Forma, Input, SearchButton, Label } from './SearchForm.styled';
+
 import { Formik } from 'formik';
 
 export class SearchForm extends Component {
@@ -20,7 +22,7 @@ onSubmit={this.handleSubmit}
   >
     <Forma >
     <SearchButton type="submit" >
-      <Label >S</Label>
+      <Label>S</Label>
     </SearchButton>
 
     <Input

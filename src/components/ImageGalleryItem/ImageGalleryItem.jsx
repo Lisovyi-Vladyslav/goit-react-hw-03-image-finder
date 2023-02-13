@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Gallery_item, Gallery_image} from './ImageGalleryItem.styled'
+import {GalleryItem, GalleryImage} from './ImageGalleryItem.styled'
 export class ImageGalleryItem extends Component {
 
 
@@ -7,9 +7,9 @@ export class ImageGalleryItem extends Component {
     const {webformatURL, largeImageURL, hendlOpenModal} = this.props
     return (<>
       {
-  <Gallery_item onClick={() => hendlOpenModal(largeImageURL)}>
-  <Gallery_image src={webformatURL} alt=""/>
-</Gallery_item>
+  <GalleryImage onClick={() => hendlOpenModal(largeImageURL)}>
+  <GalleryItem src={webformatURL} alt=""/>
+</GalleryImage>
 }      
     </>)
       ;

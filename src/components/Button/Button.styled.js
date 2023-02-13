@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const Load_more = styled.button`
+export const LoadMore = styled.button`
 padding: 8px 16px;
   border-radius: 2px;
   background-color: #3f51b5;
@@ -24,7 +24,7 @@ padding: 8px 16px;
      background-color: #303f9f;   
     }
  `
-export const Load_more_conteiner = styled.div`
+export const LoadMoreConteiner = styled.div`
 margin-top: 10px;
  display: flex;
  justify-content: center;
