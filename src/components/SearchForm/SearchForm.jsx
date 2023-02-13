@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-
-import { Forma, Input, SearchButton, Label } from './SearchForm.styled';
-
 import { Formik } from 'formik';
+import { Forma, Input, SearchButton, Label } from './SearchForm.styled';
 
 export class SearchForm extends Component {
 
@@ -14,8 +12,7 @@ handleSubmit = (values, actions) => {
 
   render() {
     return(
-      <>
-       
+      <>    
 <Formik
 initialValues={{ search: '' }}
 onSubmit={this.handleSubmit}
@@ -28,15 +25,11 @@ onSubmit={this.handleSubmit}
     <Input
       type="text"
       name="search"
-    
       placeholder="Search images and photos"
     />
   </Forma>
-</Formik>
-          
-        
-      </>
-          
+</Formik>   
+      </>    
     );
       
   }
